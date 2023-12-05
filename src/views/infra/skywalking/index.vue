@@ -12,7 +12,8 @@ export default {
   components: { iFrame },
   data() {
     return {
-      url: "http://skywalking.shop.iocoder.cn",
+     // url: "http://skywalking.shop.iocoder.cn",
+      url: "http://192.168.2.111:8555/",
       loading: true
     };
   },
@@ -28,3 +29,6 @@ export default {
   }
 };
 </script>
+
+
+
