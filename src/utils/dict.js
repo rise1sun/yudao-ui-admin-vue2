@@ -81,6 +81,61 @@ export const DICT_TYPE = {
   PROMOTION_COUPON_TAKE_TYPE: 'promotion_coupon_take_type', // 优惠劵的领取方式
   PROMOTION_ACTIVITY_STATUS: 'promotion_activity_status', // 优惠活动的状态
   PROMOTION_CONDITION_TYPE: 'promotion_condition_type', // 营销的条件类型枚举
+
+
+  // ========== WMS - TRAY 模块 ==========
+  WMS_TRAY_TYPE: "wms_tray_type", // 托盘类型
+  WMS_TRAY_STATUS: "wms_tray_status", //托盘状态
+  WMS_TRAY_TEST: "wms_tray_test", //测试托盘
+  // ========== WMS - STORAGE 模块 ==========
+
+  WMS_STORAGE_STATUS: "wms_storage_status", // 库位状态
+  WMS_STORAGE_HAS_GOODS: "wms_storage_has_goods", //库位是否含有货物
+  WMS_STORAGE_HAS_FIRE_CHANNEL: "wms_storage_has_fire_channel", //库位是否有消防通道
+  WMS_FIRE_PROCESS_STATE: "wms_fire_process_state", //消防处理状态
+
+  // ========== WMS - BARCODE 模块 ==========
+  WMS_BARCODE_STATUS: "wms_barcode_status", //条码状态
+  WMS_BARCODE_SOURCE: "wms_barcode_source", //条码来源
+  WMS_BARCODE_TYPE: "wms_barcode_type", //条码状态
+
+  // ========== WMS - FORMULA 模块 ==========
+  WMS_FORMULA_STATUS: "wms_formula_status",
+  WMS_FORMULA_TYPE: "wms_formula_type",
+  // ========== WMS - FORMULA 模块 ==========
+  WMS_FORMULA_ITEM_TYPE: "wms_formula_item_type",
+  WMS_FORMULA_ITEM_STATUS: "wms_formula_item_status",
+  WMS_UPLINK_SWITCH: "wms_uplink_switch",
+  WMS_RESTING_TASK_STATUS: "wms_resting_task_status",
+  // ========== WMS - BATCH 模块 ==========
+  WMS_BATCH_STATUS: "wms_batch_status",
+
+  // ========== WMS - task 模块 ==========
+  WMS_TASK_STATUS: "wms_task_status",
+  WMS_TASK_TYPE: "wms_task_type",
+
+  // ========== WMS - traylog 模块 ==========
+  WMS_TRAY_LOG_TYPE: "wms_tray_log_type",
+  WMS_SERVICE_TYPE: "wms_service_type",
+
+
+  WCS_TASK_TEMPLATE_CANCEL_STRATEGY: "wcs_task_template_cancel_strategy",
+  WCS_TASK_TYPE: "wcs_task_type",
+  WCS_NOTIFY_TASK: "wcs_notify_task",
+  WCS_TASK_TRIGGER_TYPE: "wcs_task_trigger_type",
+  WCS_THIRD_PROTOCOL_TYPE: "wcs_third_protocol_type",
+  WCS_THIRD_REPORT_TYPE: "wcs_third_report_type",
+  WCS_RELATE_DEVICE_TYPE: "wcs_relate_device_type",
+  WCS_IS_CHANGE_LOAD: "wcs_is_change_load",
+  WCS_TASK_LEVEL: "wcs_task_level",
+  WCS_LINE_CONFIG_TYPE: "wcs_line_config_type",
+  WCS_PLC_PROTOCOL_TYPE: "wcs_plc_protocol_type",
+  WCS_DEVICE_TYPE: "wcs_device_type",
+  WCS_SEGMENT_TYPE: "wcs_segment_type",
+  WCS_TASK_STATE: "wcs_task_state",
+  WCS_NODE_TYPE:"wcs_node_type",
+  ALARM_LEVEL: "alarm_level",
+  ALARM_TYPE: "alarm_type"
 }
 
 /**

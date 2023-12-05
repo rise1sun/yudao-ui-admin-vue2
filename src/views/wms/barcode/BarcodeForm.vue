@@ -7,13 +7,19 @@
                       <el-input v-model="formData.barcode" placeholder="请输入条码号" />
                     </el-form-item>
                     <el-form-item label="数据来源" prop="dataSource">
-                      <el-input v-model="formData.dataSource" placeholder="请输入数据来源" />
+                      <el-select v-model="formData.dataSource" placeholder="请选择数据来源">
+                        <el-option v-for="dict in this.getDictDatas(DICT_TYPE.WMS_BARCODE_SOURCE)"
+                                   :key="dict.value" :label="dict.label" :value="dict.value"/>
+                      </el-select>
                     </el-form-item>
                     <el-form-item label="规格型号" prop="spec">
                       <el-input v-model="formData.spec" placeholder="请输入规格型号" />
                     </el-form-item>
                     <el-form-item label="类型" prop="type">
-                      <el-input v-model="formData.type" placeholder="请输入类型" />
+                      <el-select v-model="formData.type" placeholder="请输入类型">
+                        <el-option v-for="dict in this.getDictDatas(DICT_TYPE.WMS_BARCODE_TYPE)"
+                                   :key="dict.value" :label="dict.label" :value="dict.value" />
+                      </el-select>
                     </el-form-item>
                     <el-form-item label="库区" prop="area">
                       <el-input v-model="formData.area" placeholder="请输入库区" />
@@ -22,8 +28,9 @@
                       <el-input v-model="formData.tray" placeholder="请输入托盘号" />
                     </el-form-item>
                     <el-form-item label="条码状态" prop="barcodeStatus">
-                      <el-select v-model="formData.barcodeStatus" placeholder="请选择条码状态（1 在库 2 离库 3途中）">
-                            <el-option label="请选择字典生成" value="" />
+                      <el-select v-model="formData.barcodeStatus" placeholder="请选择条码状态">
+                        <el-option v-for="dict in this.getDictDatas(DICT_TYPE.WMS_BARCODE_STATUS)"
+                                   :key="parseInt(dict.value)" :label="dict.label" :value="parseInt(dict.value)" />
                       </el-select>
                     </el-form-item>
                     <el-form-item label="流程id" prop="formulaId">
@@ -41,14 +48,14 @@
                     <el-form-item label="ng点位" prop="ngSite">
                       <el-input v-model="formData.ngSite" placeholder="请输入ng点位" />
                     </el-form-item>
-                    <el-form-item label="复测记录标记" prop="retestMarkers">
-                      <el-input v-model="formData.retestMarkers" placeholder="请输入复测记录标记" />
+                    <el-form-item label="复测标记" prop="retestMarkers">
+                      <el-input v-model="formData.retestMarkers" placeholder="请输入复测标记" />
                     </el-form-item>
                     <el-form-item label="通道号" prop="channelIndex">
                       <el-input v-model="formData.channelIndex" placeholder="请输入通道号" />
                     </el-form-item>
                     <el-form-item label="批次" prop="batchId">
-                      <el-input v-model="formData.batchId" placeholder="请输入批次id" />
+                      <el-input v-model="formData.batchId" placeholder="请输入批次" />
                     </el-form-item>
                     <el-form-item label="备注" prop="remark">
                       <el-input v-model="formData.remark" placeholder="请输入备注" />

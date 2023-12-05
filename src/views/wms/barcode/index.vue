@@ -25,7 +25,8 @@
       </el-form-item>
       <el-form-item label="条码状态" prop="barcodeStatus">
         <el-select v-model="queryParams.barcodeStatus" placeholder="请选择条码状态" clearable size="small">
-          <el-option label="请选择字典生成" value="" />
+          <el-option v-for="dict in this.getDictDatas(DICT_TYPE.WMS_BARCODE_STATUS)"
+                     :key="dict.value" :label="dict.label" :value="dict.value"/>
         </el-select>
       </el-form-item>
 <!--      <el-form-item label="工艺流程id" prop="formulaId">
@@ -83,11 +84,19 @@
       <el-table-column label="条码号" align="center" prop="barcode" />
       <el-table-column label="数据来源" align="center" prop="dataSource" />
       <el-table-column label="规格型号" align="center" prop="spec" />
-      <el-table-column label="类型" align="center" prop="type" />
+      <el-table-column label="类型" align="center" prop="type" >
+        <template v-slot="scope">
+          <dict-tag :type="DICT_TYPE.WMS_BARCODE_TYPE" :value="scope.row.type"/>
+        </template>
+      </el-table-column>
       <el-table-column label="库区" align="center" prop="area" />
       <el-table-column label="库位" align="center" prop="storage" />
       <el-table-column label="托盘号" align="center" prop="tray" />
-      <el-table-column label="条码状态" align="center" prop="barcodeStatus" />
+      <el-table-column label="条码状态" align="center" prop="barcodeStatus" >
+        <template v-slot="scope">
+          <dict-tag :type="DICT_TYPE.WMS_BARCODE_STATUS" :value="scope.row.barcodeStatus"/>
+        </template>
+      </el-table-column>
 <!--      <el-table-column label="工艺流程id" align="center" prop="formulaId" />-->
       <el-table-column label="流程名称" align="center" prop="formulaName" />
 <!--      <el-table-column label="工艺子节点编号" align="center" prop="formulaItemId" />-->
